@@ -6,7 +6,8 @@ lazy val root = (project in file(".")).enablePlugins(PlayJava)
 
 libraryDependencies ++= Seq(
   javaJdbc,
-  javaEbean
+  javaEbean,
+  cache
 )
 
 libraryDependencies ++= Seq(
