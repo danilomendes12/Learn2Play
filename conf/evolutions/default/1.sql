@@ -3,10 +3,13 @@
 
 # --- !Ups
 
-create table person (
-  id                        varchar(255) not null,
+create table user (
+  id                        bigint auto_increment not null,
   name                      varchar(255),
-  constraint pk_person primary key (id))
+  nickname                  varchar(255),
+  email                     varchar(255),
+  password                  varchar(255),
+  constraint pk_user primary key (id))
 ;
 
 
@@ -16,7 +19,7 @@ create table person (
 
 SET FOREIGN_KEY_CHECKS=0;
 
-drop table person;
+drop table user;
 
 SET FOREIGN_KEY_CHECKS=1;
 

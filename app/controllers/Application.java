@@ -1,34 +1,41 @@
 package controllers;
 
-import play.*;
 import play.mvc.*;
 
 import views.html.*;
-
-import models.Person;
-
-import play.data.Form;
-
-import java.util.List;
-
-import play.db.ebean.Model;
-
-import static play.libs.Json.*;
+import models.User;
 
 public class Application extends Controller {
 
     public static Result index() {
-        return ok(index.render());
+        String title = "Learn2Play";
+        return ok(index.render(title));
     }
 
-    public static Result addPerson() {
-    	Person person = Form.form(Person.class).bindFromRequest().get();
-    	person.save();
-    	return redirect(routes.Application.index());
+    public static Result signupPage() {
+        String title = "Learn2Play - Sign Up";
+        return ok(page_registration.render(title));
     }
 
-    public static Result getPersons() {
-    	List<Person> persons = new Model.Finder(String.class, Person.class).all();
-    	return ok(toJson(persons));
+    public static Result loginPage() {
+        String title = "Learn2Play - Login";
+        return ok(page_login.render(title));
     }
+
+    public static Result userIndex() {
+        String title = "Learn2Play - Welcome";
+
+        if (session("user_id") == null) {
+            return redirect("/");
+        } else {
+
+            User me = User.getById(Long.valueOf(session("user_id")));
+            if (me == null) {
+                return redirect("/");
+            } else {
+                return ok(user_index.render(title, me));
+            }
+        }
+    }
+
 }
