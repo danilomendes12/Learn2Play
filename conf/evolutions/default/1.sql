@@ -3,12 +3,19 @@
 
 # --- !Ups
 
+create table tutorial (
+  id                        bigint auto_increment not null,
+  text                      varchar(255),
+  constraint pk_tutorial primary key (id))
+;
+
 create table user (
   id                        bigint auto_increment not null,
   name                      varchar(255),
   nickname                  varchar(255),
   email                     varchar(255),
   password                  varchar(255),
+  profile_image             longblob,
   constraint pk_user primary key (id))
 ;
 
@@ -18,6 +25,8 @@ create table user (
 # --- !Downs
 
 SET FOREIGN_KEY_CHECKS=0;
+
+drop table tutorial;
 
 drop table user;
 

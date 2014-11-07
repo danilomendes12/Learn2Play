@@ -3,14 +3,22 @@
 # ~~~~
 
 # Home page
-GET        /                    controllers.Application.index()
-GET        /login               controllers.Application.loginPage()
-GET        /signup              controllers.Application.signupPage()
-GET        /userindex           controllers.Application.userIndex()
+GET         /                            controllers.Application.index()
+GET         /login                       controllers.Application.loginPage()
+GET         /loginerrmsg                 controllers.Application.loginPageErrMsg()
+GET         /signup                      controllers.Application.signupPage()
+GET         /userindex                   controllers.Application.userIndex()
+GET         /userpanel                   controllers.Application.userPanel()
 
 #User activities
-GET        /api/login           controllers.UserActivity.login(email: String ?="", password: String ?="")
-GET        /api/signup          controllers.UserActivity.signup(name: String?="", nickname: String?="", email: String?="", password: String?="")
+GET         /api/login                   controllers.UserActivity.login(email: String?="", password: String?="")
+GET         /api/signup                  controllers.UserActivity.signup(name: String?="", nickname: String?="", email: String?="", password: String?="")
+GET         /api/logout                  controllers.UserActivity.logout()
+GET         /api/deleteaccount           controllers.UserActivity.deleteAccount()
+
+#Image
+POST        /profilepictureupload        controllers.ProfilePicture.upload()
+GET         /api/picture                 controllers.ProfilePicture.getProfilePicture()
 
 # Map static resources from the /public folder to the /assets URL path
-GET        /assets/*file        controllers.Assets.at(path="/public", file)
+GET         /assets/*file                controllers.Assets.at(path="/public", file)

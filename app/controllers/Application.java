@@ -19,7 +19,12 @@ public class Application extends Controller {
 
     public static Result loginPage() {
         String title = "Learn2Play - Login";
-        return ok(page_login.render(title));
+        return ok(page_login.render(title, false));
+   }
+
+    public static Result loginPageErrMsg() {
+        String title = "Learn2Play - Login";
+        return ok(page_login.render(title, true));
     }
 
     public static Result userIndex() {
@@ -28,12 +33,26 @@ public class Application extends Controller {
         if (session("user_id") == null) {
             return redirect("/");
         } else {
-
             User me = User.getById(Long.valueOf(session("user_id")));
             if (me == null) {
                 return redirect("/");
             } else {
                 return ok(user_index.render(title, me));
+            }
+        }
+    }
+
+    public static Result userPanel() {
+        String title = "Learn2Play - User Panel";
+
+        if (session("user_id") == null) {
+            return redirect("/");
+        } else {
+            User me = User.getById(Long.valueOf(session("user_id")));
+            if (me == null) {
+                return redirect("/");
+            } else {
+                return ok(user_panel.render(title, me));
             }
         }
     }

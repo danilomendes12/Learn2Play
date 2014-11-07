@@ -1,12 +1,11 @@
 package models;
 
+import com.mysql.jdbc.Blob;
 import play.data.validation.Constraints;
 import play.db.ebean.Model;
+import utils.UniqueValidator;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 
@@ -19,7 +18,7 @@ public class User extends Model {
     @Constraints.Required
     private String name;
 
-    @Constraints.Required
+    @Constraints.ValidateWith(UniqueValidator.class)
     private String nickname;
 
     @Constraints.Email
@@ -28,9 +27,11 @@ public class User extends Model {
     @Constraints.Min(6)
     private String password;
 
+    @Lob
+    public byte[] profileImage;
 
     //Construtor
-    public User(String name, String nickName, String email, String password){
+    public User(String name, String nickName, String email, String password) {
         this.name = name;
         this.nickname = nickName;
         this.email = email;
@@ -57,6 +58,15 @@ public class User extends Model {
 
     public String getPassword() {
         return password;
+    }
+
+    public void setProfileImage(byte[] image) {
+        this.profileImage = image;
+        this.save();
+    }
+
+    public byte[] getProfileImage() {
+        return profileImage;
     }
 
     //Metodos static
@@ -87,5 +97,24 @@ public class User extends Model {
 
     public static User getById(Long user_id) {
         return find.byId(user_id);
+    }
+
+    public static void deleteAccount(User user) {
+        user.delete();
+    }
+
+    public static boolean authenticate(String email, String password) {
+        List<User> users = find
+                .select("name, nickname, email, password")
+                .where()
+                .eq("email", email)
+                .eq("password", password)
+                .findList();
+
+        if (users.size() > 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

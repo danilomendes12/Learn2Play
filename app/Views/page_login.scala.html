@@ -1,6 +1,7 @@
-@(title: String)
+@(title: String, errorMsg: Boolean)
 
-@main(title){
+
+    @main(title){
     <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs">
         <div class="container">
@@ -22,7 +23,11 @@
                     <div class="reg-header">            
                         <h2>Login to your account</h2>
                     </div>
-
+                    @if(errorMsg) {
+                        <p class="error">
+                        Invalid Login or Password
+                        </p>
+                    }
                     <div class="input-group margin-bottom-20">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
                         <input type="text" name="email" placeholder="Email" class="form-control">
@@ -45,7 +50,7 @@
 
                     <h4>Forget your Password ?</h4>
                     <p>no worries, <a class="color-green" href="#">click here</a> to reset your password.</p>
-                </form>            
+                </form>
             </div>
         </div><!--/row-->
     </div><!--/container-->		

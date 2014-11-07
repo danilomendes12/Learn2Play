@@ -1,0 +1,596 @@
+@(title: String, user: User)
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+    <head>
+        <title>@title</title>
+
+            <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+            <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+            <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+            <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms/version-2.0.1/css/custom-sky-forms.css">
+
+
+            <!-- CSS Page Style -->
+        <link rel="stylesheet" href="assets/css/pages/page_search.css">
+
+            <!-- CSS Theme -->
+        <link rel="stylesheet" href="assets/css/themes/default.css" id="style_color">
+
+            <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/custom.css">
+    </head>
+
+    <body>
+            <!--=== Style Switcher ===-->
+        <i class="style-switcher-btn fa fa-cogs hidden-xs"></i>
+        <div class="style-switcher animated fadeInRight">
+            <div class="theme-close"><i class="icon-close"></i></div>
+            <div class="theme-heading">Theme Colors</div>
+            <ul class="list-unstyled">
+                <li class="theme-default theme-active" data-style="default" data-header="light"></li>
+                <li class="theme-blue" data-style="blue" data-header="light"></li>
+                <li class="theme-orange" data-style="orange" data-header="light"></li>
+                <li class="theme-red" data-style="red" data-header="light"></li>
+                <li class="theme-light last" data-style="light" data-header="light"></li>
+
+                <li class="theme-purple" data-style="purple" data-header="light"></li>
+                <li class="theme-aqua" data-style="aqua" data-header="light"></li>
+                <li class="theme-brown" data-style="brown" data-header="light"></li>
+                <li class="theme-dark-blue" data-style="dark-blue" data-header="light"></li>
+                <li class="theme-light-green last" data-style="light-green" data-header="light"></li>
+            </ul>
+            <div style="margin-bottom : 18 px ;"></div>
+            <div class="theme-heading">Layouts</div>
+            <div class="text-center">
+                <a href="javascript:void(0);" class="btn-u btn-u-green btn-block active-switcher-btn wide-layout-btn">Wide</a>
+                <a href="#" class="btn-u btn-u-green btn-block boxed-layout-btn">Boxed</a>
+            </div>
+        </div> <!--/style-switcher-->
+        <!--=== End Style Switcher ===-->
+
+        <div class="wrapper">
+                <!--=== Header ===-->
+            <div class="header">
+                    <!-- Topbar -->
+                <div class="topbar">
+                    <div class="container">
+                            <!-- Topbar Navigation -->
+                        <ul class="loginbar pull-right">
+                            <li>
+                                <a href="/userpanel">@user.getNickname()</a>
+                            </li>
+                            <li class="topbar-devider"></li>
+                            <li><a href="/api/logout">Logout</a></li>
+                        </ul>
+                            <!-- End Topbar Navigation -->
+                    </div>
+                </div>
+                    <!-- End Topbar -->
+
+                    <!-- Navbar -->
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="fa fa-bars"></span>
+                            </button>
+                            <a class="navbar-brand" href="/">
+                                <img id="logo-header" src="assets/img/logo1-default.png" alt="Logo">
+                            </a>
+                        </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-responsive-collapse">
+                            <ul class="nav navbar-nav">
+                                    <!-- Home -->
+                                <li class="dropdown active">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                                        Home
+                                    </a>
+                                    <ul class="dropdown-menu">
+
+                                    </ul>
+                                </li>
+                                    <!-- End Home -->
+
+                                    <!-- Pages -->
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                                        Pages
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                            <!-- About Pages -->
+
+                                    </ul>
+                                </li>
+                                    <!-- End Features -->
+
+                                    <!-- Portfolio -->
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                                        Portfolio
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                    </ul>
+                                </li>
+                                    <!-- Ens Portfolio -->
+
+                                    <!-- Blog -->
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                                        Blog
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                    </ul>
+                                </li>
+                                    <!-- End Blog -->
+
+                                    <!-- Contacts -->
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                                        Contacts
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                    </ul>
+                                </li>
+                                    <!-- End Contacts -->
+
+                                    <!-- Search Block -->
+                                <li>
+                                    <i class="search fa fa-search search-btn"></i>
+                                    <div class="search-open">
+                                        <div class="input-group animated fadeInDown">
+                                            <input type="text" class="form-control" placeholder="Search">
+                                            <span class="input-group-btn">
+                                                <button class="btn-u" type="button">Go</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                    <!-- End Search Block -->
+                            </ul>
+                        </div> <!--/navbar-collapse-->
+                    </div>
+                </div>
+                    <!-- End Navbar -->
+            </div>
+                <!--=== End Header ===-->
+
+    <!--=== Profile ===-->
+    <div class="profile">   
+        <div class="container content">
+            <div class="row">
+                <!--Left Sidebar-->
+                <div class="col-md-3 md-margin-bottom-40">
+                    <img class="img-responsive profile-img margin-bottom-20" src="/api/picture" alt="">
+                    @helper.form(action = routes.ProfilePicture.upload(), 'enctype -> "multipart/form-data") {
+                        <input type="file" name="picture">
+                        <input  type="submit" value="Alterar Foto" id="/profilepictureupload" class="form-control margin-bottom-20">
+                    }
+
+                    <div class="panel-heading-v2 overflow-h">
+                        <h2 class="heading-xs pull-left"><i class="fa fa-bar-chart-o"></i> Task Progress</h2>
+                        <a href="#"><i class="fa fa-cog pull-right"></i></a>
+                    </div>
+                    <h3 class="heading-xs">Web Design <span class="pull-right">92%</span></h3>
+                    <div class="progress progress-u progress-xxs">
+                        <div style="width: 92%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="92" role="progressbar" class="progress-bar progress-bar-u">
+                        </div>
+                    </div>
+                    <h3 class="heading-xs">Unify Project <span class="pull-right">85%</span></h3>
+                    <div class="progress progress-u progress-xxs">
+                        <div style="width: 85%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="85" role="progressbar" class="progress-bar progress-bar-blue">
+                        </div>
+                    </div>
+                    <h3 class="heading-xs">Sony Corporation <span class="pull-right">64%</span></h3>
+                    <div class="progress progress-u progress-xxs margin-bottom-40">
+                        <div style="width: 64%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="64" role="progressbar" class="progress-bar progress-bar-dark">
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <!--Notification-->
+                    <div class="panel-heading-v2 overflow-h">
+                        <h2 class="heading-xs pull-left"><i class="fa fa-bell-o"></i> Notification</h2>
+                        <a href="#"><i class="fa fa-cog pull-right"></i></a>
+                    </div>
+                    <ul id="scrollbar5" class="list-unstyled contentHolder margin-bottom-20">
+                        <li class="notification">
+                            <i class="icon-custom icon-sm rounded-x icon-bg-red icon-line icon-envelope"></i>
+                            <div class="overflow-h">
+                                <span><strong>Albert Heller</strong> has sent you email.</span>
+                                <small>Two minutes ago</small>
+                            </div>    
+                        </li>
+                        <li class="notification">
+                            <img class="rounded-x" src="assets/img/testimonials/img6.jpg" alt="">
+                            <div class="overflow-h">
+                                <span><strong>Taylor Lee</strong> started following you.</span>
+                                <small>Today 18:25 pm</small>
+                            </div>    
+                        </li>
+                        <li class="notification">
+                            <i class="icon-custom icon-sm rounded-x icon-bg-yellow icon-line fa fa-bolt"></i>
+                            <div class="overflow-h">
+                                <span><strong>Natasha Kolnikova</strong> accepted your invitation.</span>
+                                <small>Yesterday 1:07 pm</small>
+                            </div>    
+                        </li>
+                        <li class="notification">
+                            <img class="rounded-x" src="assets/img/testimonials/img1.jpg" alt="">
+                            <div class="overflow-h">
+                                <span><strong>Mikel Andrews</strong> commented on your Timeline.</span>
+                                <small>23/12 11:01 am</small>
+                            </div>    
+                        </li>
+                        <li class="notification">
+                            <i class="icon-custom icon-sm rounded-x icon-bg-blue icon-line fa fa-comments"></i>
+                            <div class="overflow-h">
+                                <span><strong>Bruno Js.</strong> added you to group chating.</span>
+                                <small>Yesterday 1:07 pm</small>
+                            </div>    
+                        </li>
+                        <li class="notification">
+                            <img class="rounded-x" src="assets/img/testimonials/img6.jpg" alt="">
+                            <div class="overflow-h">
+                                <span><strong>Taylor Lee</strong> changed profile picture.</span>
+                                <small>23/12 15:15 pm</small>
+                            </div>    
+                        </li>
+                    </ul>    
+                    <button type="button" class="btn-u btn-u-default btn-u-sm btn-block">Load More</button>
+                    <!--End Notification-->
+
+                    <div class="margin-bottom-50"></div>
+
+                    <!--Datepicker-->
+                    <form action="" id="sky-form2" class="sky-form">
+                        <div id="inline-start"></div>
+                    </form> 
+                    <!--End Datepicker-->
+                </div>
+                <!--End Left Sidebar-->
+                
+                <div class="col-md-9">
+                    <!--Profile Body-->
+                    <div class="profile-body margin-bottom-20">
+                        <div class="tab-v1">
+                            <ul class="nav nav-justified nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#profile">Edit Profile</a></li>
+                                <li><a data-toggle="tab" href="#password">Change Password</a></li>
+                                <li><a data-toggle="tab" href="#payment">Deletar Conta</a></li>
+                                <li><a data-toggle="tab" href="#settings">Notification Settings</a></li>
+                            </ul>          
+                            <div class="tab-content">
+                                <div id="profile" class="profile-edit tab-pane fade in active">
+                                    <h2 class="heading-md">Manage your Name, ID and Email Addresses.</h2>
+                                    <p>Below are the name and email addresses on file for your account.</p>
+                                    </br>
+                                    <dl class="dl-horizontal">
+                                        <dt><strong>Your name </strong></dt>
+                                        <dd>
+                                            @user.getName()
+                                            <span>
+                                                <a class="pull-right" href="#">
+                                                    <i class="fa fa-pencil"></i>
+                                                </a>
+                                            </span>
+                                        </dd>
+                                        <hr>
+                                        <dt><strong>Nickname </strong></dt>
+                                        <dd>
+                                            @user.getNickname()
+                                            <span>
+                                                <a class="pull-right" href="#">
+                                                    <i class="fa fa-pencil"></i>
+                                                </a>
+                                            </span>
+                                        </dd>
+                                        <hr>
+                                        <dt><strong>Email</strong></dt>
+                                        <dd>
+                                            @user.getEmail()
+                                            <span>
+                                                <a class="pull-right" href="#">
+                                                    <i class="fa fa-pencil"></i>
+                                                </a>
+                                            </span>
+                                        </dd>
+                                        <hr>
+                                        <dt><strong>Phone Number </strong></dt>
+                                        <dd>
+                                            (304) 33-2867-499 
+                                            <span>
+                                                <a class="pull-right" href="#">
+                                                    <i class="fa fa-pencil"></i>
+                                                </a>
+                                            </span>
+                                        </dd>
+                                        <hr>
+                                        <dt><strong>Office Number </strong></dt>
+                                        <dd>
+                                            (304) 44-9810-296 
+                                            <span>
+                                                <a class="pull-right" href="#">
+                                                    <i class="fa fa-pencil"></i>
+                                                </a>
+                                            </span>
+                                        </dd>
+                                        <hr>
+                                        <dt><strong>Address </strong></dt>
+                                        <dd>
+                                            California, US 
+                                            <span>
+                                                <a class="pull-right" href="#">
+                                                    <i class="fa fa-pencil"></i>
+                                                </a>
+                                            </span>
+                                        </dd>
+                                        <hr>
+                                    </dl>
+                                    <button type="button" class="btn-u btn-u-default">Cancel</button>
+                                    <button type="button" class="btn-u">Save Changes</button>
+                                </div>
+
+                                <div id="password" class="profile-edit tab-pane fade">
+                                    <h2 class="heading-md">Manage your Security Settings</h2>
+                                    <p>Change your password.</p>
+                                    </br>
+                                    <form class="sky-form" id="sky-form4" action="">
+                                        <dl class="dl-horizontal">
+                                            <dt>Username</dt>
+                                            <dd>
+                                                <section>
+                                                    <label class="input">
+                                                        <i class="icon-append fa fa-user"></i>
+                                                        <input type="text" placeholder="Username" name="username">
+                                                        <b class="tooltip tooltip-bottom-right">Needed to enter the website</b>
+                                                    </label>
+                                                </section>
+                                            </dd>
+                                            <dt>Email address</dt>
+                                            <dd>
+                                                <section>
+                                                    <label class="input">
+                                                        <i class="icon-append fa fa-envelope"></i>
+                                                        <input type="email" placeholder="Email address" name="email">
+                                                        <b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
+                                                    </label>
+                                                </section>
+                                            </dd>
+                                            <dt>Enter your password</dt>
+                                            <dd>
+                                                <section>
+                                                    <label class="input">
+                                                        <i class="icon-append fa fa-lock"></i>
+                                                        <input type="password" id="password" placeholder="Password" name="password">
+                                                        <b class="tooltip tooltip-bottom-right">Don't forget your password</b>
+                                                    </label>
+                                                </section>
+                                            </dd>
+                                            <dt>Confirm Password</dt>
+                                            <dd>
+                                                <section>
+                                                    <label class="input">
+                                                        <i class="icon-append fa fa-lock"></i>
+                                                        <input type="password" placeholder="Confirm password" name="passwordConfirm">
+                                                        <b class="tooltip tooltip-bottom-right">Don't forget your password</b>
+                                                    </label>
+                                                </section>
+                                            </dd>    
+                                        </dl>
+                                        <label class="toggle toggle-change"><input type="checkbox" checked="" name="checkbox-toggle-1"><i></i>Remember password</label>
+                                        </br>
+                                        <section>
+                                            <label class="checkbox"><input type="checkbox" id="terms" name="terms"><i></i><a href="#">I agree with the Terms and Conditions</a></label>
+                                        </section>
+                                        <button type="button" class="btn-u btn-u-default">Cancel</button>
+                                        <button class="btn-u" type="submit">Save Changes</button>
+                                    </form>    
+                                </div>
+
+                                <div id="payment" class="profile-edit tab-pane fade">
+                                    <h2 class="heading-md">Deletar conta</h2>
+                                    <p>Below are the payment options for your account.</p>
+                                    </br>
+                                    <form class="sky-form" method="GET" action="/api/deleteaccount">
+                                        <!--Checkout-Form-->
+                                        <button class="btn-u" type="submit">Deletar Contae</button>
+                                        <!--End Checkout-Form-->
+                                    </form>    
+                                </div>
+
+                                <div id="settings" class="profile-edit tab-pane fade">
+                                    <h2 class="heading-md">Manage your Notifications.</h2>
+                                    <p>Below are the notifications you may manage.</p>
+                                    </br>
+                                    <form class="sky-form" id="sky-form" action="">
+                                        <label class="toggle"><input type="checkbox" checked="" name="checkbox-toggle-1"><i></i>Email notification</label>
+                                        <hr>
+                                        <label class="toggle"><input type="checkbox" checked="" name="checkbox-toggle-1"><i></i>Send me email notification when a user comments on my blog</label>
+                                        <hr>
+                                        <label class="toggle"><input type="checkbox" checked="" name="checkbox-toggle-1"><i></i>Send me email notification for the latest update</label>
+                                        <hr>
+                                        <label class="toggle"><input type="checkbox" checked="" name="checkbox-toggle-1"><i></i>Send me email notification when a user sends me message</label>
+                                        <hr>
+                                        <label class="toggle"><input type="checkbox" checked="" name="checkbox-toggle-1"><i></i>Receive our monthly newsletter</label>
+                                        <hr>    
+                                        <button type="button" class="btn-u btn-u-default">Reset</button>
+                                        <button class="btn-u" type="submit">Save Changes</button>
+                                    </form>    
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <!--End Profile Body-->
+                </div>
+            </div><!--/end row-->
+        </div><!--/container-->    
+    </div>      
+    <!--=== End Profile ===-->
+
+    <!--=== Footer ===-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 md-margin-bottom-40">
+                    <!-- About -->
+                    <div class="headline"><h2>About</h2></div>  
+                    <p class="margin-bottom-25 md-margin-bottom-40">Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals.</p>    
+                    <!-- End About -->
+
+                    <!-- Monthly Newsletter -->
+                    <div class="headline"><h2>Monthly Newsletter</h2></div> 
+                    <p>Subscribe to our newsletter and stay up to date with the latest news and deals!</p>
+                    <form class="footer-subsribe">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Email Address">                            
+                            <span class="input-group-btn">
+                                <button class="btn-u" type="button">Subscribe</button>
+                            </span>
+                        </div>                  
+                    </form>                         
+                    <!-- End Monthly Newsletter -->
+                </div><!--/col-md-4-->  
+                
+                <div class="col-md-4 md-margin-bottom-40">
+                    <!-- Recent Blogs -->
+                    <div class="posts">
+                        <div class="headline"><h2>Recent Blog Entries</h2></div>
+                        <dl class="dl-horizontal">
+                            <dt><a href="#"><img src="assets/img/sliders/elastislide/6.jpg" alt="" /></a></dt>
+                            <dd>
+                                <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
+                            </dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                        <dt><a href="#"><img src="assets/img/sliders/elastislide/10.jpg" alt="" /></a></dt>
+                            <dd>
+                                <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
+                            </dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                        <dt><a href="#"><img src="assets/img/sliders/elastislide/11.jpg" alt="" /></a></dt>
+                            <dd>
+                                <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
+                            </dd>
+                        </dl>
+                    </div>
+                    <!-- End Recent Blogs -->                    
+                </div><!--/col-md-4-->
+
+                <div class="col-md-4">
+                    <!-- Contact Us -->
+                    <div class="headline"><h2>Contact Us</h2></div> 
+                    <address class="md-margin-bottom-40">
+                        25, Lorem Lis Street, Orange <br />
+                        California, US <br />
+                        Phone: 800 123 3456 <br />
+                        Fax: 800 123 3456 <br />
+                    </address>
+                    <!-- End Contact Us -->
+
+                    <!-- Social Links -->
+                    <div class="headline"><h2>Stay Connected</h2></div> 
+                    <ul class="social-icons">
+                        <li><a href="#" data-original-title="Feed" class="social_rss"></a></li>
+                        <li><a href="#" data-original-title="Facebook" class="social_facebook"></a></li>
+                        <li><a href="#" data-original-title="Twitter" class="social_twitter"></a></li>
+                        <li><a href="#" data-original-title="Goole Plus" class="social_googleplus"></a></li>
+                        <li><a href="#" data-original-title="Pinterest" class="social_pintrest"></a></li>
+                        <li><a href="#" data-original-title="Linkedin" class="social_linkedin"></a></li>
+                        <li><a href="#" data-original-title="Vimeo" class="social_vimeo"></a></li>
+                    </ul>
+                    <!-- End Social Links -->
+                </div><!--/col-md-4-->
+            </div>
+        </div> 
+    </div><!--/footer-->
+    <!--=== End Footer ===-->
+
+    <!--=== Copyright ===-->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">                     
+                    <p>
+                        2014 &copy; Unify. ALL Rights Reserved. 
+                        <a target="_blank" href="https://twitter.com/htmlstream">Htmlstream</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                    </p>
+                </div>
+                <div class="col-md-6">  
+                    <a href="index.html">
+                        <img class="pull-right" id="logo-footer" src="assets/img/logo2-default.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div> 
+    </div><!--/copyright--> 
+    <!--=== End Copyright ===-->
+</div><!--/wrapper-->
+
+<!-- JS Global Compulsory -->           
+<script type="text/javascript" src="assets/plugins/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+<!-- Scrollbar -->
+<script src="assets/plugins/scrollbar/src/jquery.mousewheel.js"></script>
+<script src="assets/plugins/scrollbar/src/perfect-scrollbar.js"></script>
+<!-- Validation Form -->
+<script src="assets/plugins/sky-forms/version-2.0.1/js/jquery.validate.min.js"></script>
+<!-- Checkout Form -->
+<script src="assets/plugins/sky-forms/version-2.0.1/js/jquery.maskedinput.min.js"></script>
+<!-- Datepicker Form -->
+<script src="assets/plugins/sky-forms/version-2.0.1/js/jquery-ui.min.js"></script>
+<!-- JS Page Level -->           
+<script type="text/javascript" src="assets/js/app.js"></script>
+<script type="text/javascript" src="assets/js/forms/reg.js"></script>
+<script type="text/javascript" src="assets/js/forms/checkout.js"></script>
+<script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        RegForm.initRegForm();
+        Datepicker.initDatepicker();
+        CheckoutForm.initCheckoutForm();        
+    });
+</script>
+<script>
+    jQuery(document).ready(function ($) {
+        "use strict";
+        $('.contentHolder').perfectScrollbar();
+    });
+</script>
+<!--[if lt IE 9]>
+    <script src="assets/plugins/respond.js"></script>
+    <script src="assets/plugins/html5shiv.js"></script>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="assets/plugins/sky-forms/version-2.0.1/js/sky-forms-ie8.js"></script>
+<![endif]-->
+
+<!--[if lt IE 10]>
+    <script src="assets/plugins/sky-forms/version-2.0.1/js/jquery.placeholder.min.js"></script>
+<![endif]-->
+
+</body>
+</html> 
