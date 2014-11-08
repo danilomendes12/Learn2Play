@@ -117,4 +117,19 @@ public class User extends Model {
             return false;
         }
     }
+
+    public static boolean authenticateNickname(String nickname) {
+        List<User> users = find
+                .select("nickname")
+                .where()
+                .eq("nickname", nickname)
+                .findList();
+
+        if (users.size() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

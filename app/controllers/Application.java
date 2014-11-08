@@ -2,6 +2,7 @@ package controllers;
 
 import play.mvc.*;
 
+import utils.UserSignupValidation;
 import views.html.*;
 import models.User;
 
@@ -12,9 +13,16 @@ public class Application extends Controller {
         return ok(index.render(title));
     }
 
-    public static Result signupPage() {
+    public static Result signupPage(Integer error, String name, String nickname, String email) {
         String title = "Learn2Play - Sign Up";
-        return ok(page_registration.render(title));
+
+        UserSignupValidation userSignupValidation = UserSignupValidation.fromCode(error);
+
+        if(userSignupValidation != null) {
+            return ok(page_registration.render(title, userSignupValidation, name, nickname, email));
+        } else {
+            return ok(page_registration.render(title, userSignupValidation, "", "", ""));
+        }
     }
 
     public static Result loginPage() {

@@ -6,13 +6,13 @@
 GET         /                            controllers.Application.index()
 GET         /login                       controllers.Application.loginPage()
 GET         /loginerrmsg                 controllers.Application.loginPageErrMsg()
-GET         /signup                      controllers.Application.signupPage()
+GET         /signup                      controllers.Application.signupPage(error: Integer?=0, name: String?="", nickname: String?="", email: String?="")
 GET         /userindex                   controllers.Application.userIndex()
 GET         /userpanel                   controllers.Application.userPanel()
 
 #User activities
 GET         /api/login                   controllers.UserActivity.login(email: String?="", password: String?="")
-GET         /api/signup                  controllers.UserActivity.signup(name: String?="", nickname: String?="", email: String?="", password: String?="")
+GET         /api/signup                  controllers.UserActivity.signup(name: String?="", nickname: String?="", email: String?="", password: String?="", confirmationPassword: String?="")
 GET         /api/logout                  controllers.UserActivity.logout()
 GET         /api/deleteaccount           controllers.UserActivity.deleteAccount()
 

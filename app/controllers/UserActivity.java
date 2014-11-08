@@ -3,7 +3,10 @@ package controllers;
 import models.User;
 import play.mvc.Controller;
 import play.mvc.Result;
+import utils.UserSignupValidation;
 import views.html.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -11,16 +14,26 @@ import views.html.*;
  */
 public class UserActivity extends Controller {
 
-    public static Result signup(String name, String nickname, String email, String password) {
-        User.signup(name, nickname, email, password);
+    public static Result signup(String name, String nickname, String email, String password, String confirmationPassword) {
 
-        User me = User.login(email, password);
+        UserSignupValidation error = UserSignupValidation.validate(name, nickname, email, password, confirmationPassword);
 
-        if (me == null) {
-            return notFound();
+        if(error == null) {
+
+            User.signup(name, nickname, email, password);
+
+            User me = User.login(email, password);
+
+            if (me == null) {
+                return notFound();
+            } else {
+                session("user_id", me.getId().toString());
+                return redirect("/userindex");
+            }
+
         } else {
-            session("user_id", me.getId().toString());
-            return redirect("/userindex");
+
+            return redirect("/signup?error=".concat(error.getCode().toString()).concat("&name=").concat(name).concat("&nickname=").concat(nickname).concat("&email=").concat(email));
         }
     }
 
@@ -54,7 +67,6 @@ public class UserActivity extends Controller {
     }
 
     public static class Login {
-
         public String email;
         public String password;
 

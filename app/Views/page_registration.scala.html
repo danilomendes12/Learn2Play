@@ -1,6 +1,6 @@
-@(title: String)
+@(title: String, error: utils.UserSignupValidation, name: String, nickname: String, email: String)
 
-    @main(title) {
+@main(title) {
         <!--=== Breadcrumbs ===-->
         <div class="breadcrumbs">
             <div class="container">
@@ -25,29 +25,30 @@
                                 to login your account.</p>
                         </div>
 
+                        @if(error != null) {
+                            <p><span style="color : red">@error.getMessage()</span></p>
+                        }
+
                         <label>Nome Completo</label>
-                        <input input type="text" name="name" class="form-control margin-bottom-20">
+                        <input type="text" name="name" class="form-control margin-bottom-20" value="@name">
 
                         <label>Nickname</label>
-                        <input input type="text" name="nickname" class="form-control margin-bottom-20">
+                        <input type="text" name="nickname" class="form-control margin-bottom-20" value="@nickname">
 
                         <label>Email <span class="color-red">*</span></label>
-                        <input input type="text" name="email" class="form-control margin-bottom-20">
-
-                        <label>Senha <span class="color-red">*</span></label>
-                        <input input type="password" name="password" class="form-control margin-bottom-20">
-
-                        <label>Foto de perfil</label>
-
-                        <hr>
+                        <input type="text" name="email" class="form-control margin-bottom-20" value="@email">
 
                         <div class="row">
-                            <div class="col-lg-6">
-                                <label class="checkbox">
-                                    <input type="checkbox">
-                                    I read <a href="page_terms.html" class="color-green">Terms and Conditions</a>
-                                </label>
+                            <div class="col-sm-6">
+                                <label>Password <span class="color-red">*</span></label>
+                                <input type="password" name="password" class="form-control margin-bottom-20">
                             </div>
+                            <div class="col-sm-6">
+                                <label>Confirm Password <span class="color-red">*</span></label>
+                                <input type="password" name="confirmationPassword"  class="form-control margin-bottom-20">
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-lg-6 text-right">
                                 <button class="btn-u" type="submit" id="/api/signup">Register</button>
                             </div>
