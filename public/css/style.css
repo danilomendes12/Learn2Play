@@ -329,6 +329,10 @@
 	font-size: 19px;
 }
 
+#logo-header{
+	height: 25px;
+}
+
 /*Responsive Navbar*/
 @media (max-width: 999px) {
 	/*Dropdown Menu Slide Down Effect*/
@@ -801,7 +805,7 @@
 		margin-top: 9px;
 	}
 
-	/*Search*/
+	/*Search*/ƒ
 	.header-fixed .header.header-fixed-shrink .navbar .nav > li > .search {
 		top: 5px;
 		position: relative;
