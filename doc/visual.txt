@@ -1,0 +1,13 @@
+Identidade Visual
+
+1)Cores
+
+    a)Logo
+        Laranja mira: RGB (255,59,6)
+        Laranja "2": RGB (255, 99, 9)
+        Preto: RGB (0, 0, 0)
+
+    b)Cores analogas (Do laranja mais claro pro mais avermelhado)
+        RGB(255, 134, 4)
+        RGB(232, 105, 3)
+        RGB(232, 70, 3)
