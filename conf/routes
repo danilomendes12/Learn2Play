@@ -9,6 +9,10 @@ GET         /loginerrmsg                 controllers.Application.loginPageErrMsg
 GET         /signup                      controllers.Application.signupPage(error: Integer?=0, name: String?="", nickname: String?="", email: String?="")
 GET         /userindex                   controllers.Application.userIndex()
 GET         /userpanel                   controllers.Application.userPanel()
+GET         /tutorialpage                  controllers.Application.tutorialPage()
+GET         /createtutorialpage                   controllers.Application.createTutorialPage()
+GET         /searchtutorialpage                  controllers.Application.searchTutorialPage()
+
 
 #User activities
 GET         /api/login                   controllers.UserActivity.login(email: String?="", password: String?="")

@@ -33,6 +33,8 @@ create table plataforma (
 create table tutorial (
   id                        bigint auto_increment not null,
   text                      varchar(255),
+  tutorial_image            longblob,
+  recomendation_number      integer,
   user_id                   bigint,
   distribution_id           bigint,
   constraint pk_tutorial primary key (id))
