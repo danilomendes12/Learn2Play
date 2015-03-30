@@ -4,10 +4,7 @@ package models;
 import play.data.validation.Constraints;
 import play.db.ebean.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -20,4 +17,10 @@ public class Comentario {
 
     @Constraints.Required
     private String title;
+
+    @ManyToOne
+    User creator;
+
+    @ManyToOne
+    Tutorial tutorial;
 }

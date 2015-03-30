@@ -1,13 +1,5 @@
 OBRIGATÓRIOS
 
-1)Criar models no java e no banco de dados
-    a)User
-    b)Tutorial
-    c)Comentário
-    d)Jogo
-    e)Plataforma
-
-
 2)Pegar templates de páginas faltantes
     a)Search tutorial page
     b)Create tutorial page
@@ -24,21 +16,30 @@ OBRIGATÓRIOS
 6)Arrumar UI/layout das páginas
     a)Landing
     b)User index
-    c)User panel
+    c)User pangil
     d)Sign Up page
     e)Login page
     f)Search tutorial page
     g)Create tutorial page
     h)Tutorial
 
-7)Ultimos ajustes e testes
+7)Achar API para listar jogos de consoles
 
-8)Comprar domínio
+8)Ultimos ajustes e testes
 
-9)Subir na amazon/colocar em produção
+9)Comprar domínio
+
+10)Subir na amazon/colocar em produção
 ==============================
 OPCIONAIS
 
 
 ================================
 FINALIZADOS
+
+1)Criar models no java e no banco de dados
+    a)User
+    b)Tutorial
+    c)Comentário
+    d)Jogo
+    e)Plataforma

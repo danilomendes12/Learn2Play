@@ -30,6 +30,12 @@ public class User extends Model {
     @Lob
     public byte[] profileImage;
 
+    @OneToMany
+    List<Tutorial> tutorialList;
+
+    @OneToMany
+    List<Comentario> comentarios;
+
     //Construtor
     public User(String name, String nickName, String email, String password) {
         this.name = name;

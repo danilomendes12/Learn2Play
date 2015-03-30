@@ -7,17 +7,19 @@ import javax.persistence.*;
 import java.util.List;
 
 /**
- * Created by danilomendes on 11/5/14.
+ * Created by danilomendes on 3/30/15.
  */
 @Entity
-public class Game extends Model{
-
+public class Distribution {
     @Id
     Long id;
 
-    @Constraints.Required
-    private String name;
+    @ManyToOne
+    Game game;
+
+    @ManyToOne
+    Plataforma console;
 
     @OneToMany
-    List<Distribution> distributions;
+    List<Tutorial> tutorials;
 }
