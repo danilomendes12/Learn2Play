@@ -3,6 +3,24 @@
 
 # --- !Ups
 
+create table comentario (
+  id                        bigint auto_increment not null,
+  title                     varchar(255),
+  constraint pk_comentario primary key (id))
+;
+
+create table game (
+  id                        bigint auto_increment not null,
+  name                      varchar(255),
+  constraint pk_game primary key (id))
+;
+
+create table plataforma (
+  id                        bigint auto_increment not null,
+  name                      varchar(255),
+  constraint pk_plataforma primary key (id))
+;
+
 create table tutorial (
   id                        bigint auto_increment not null,
   text                      varchar(255),
@@ -25,6 +43,12 @@ create table user (
 # --- !Downs
 
 SET FOREIGN_KEY_CHECKS=0;
+
+drop table comentario;
+
+drop table game;
+
+drop table plataforma;
 
 drop table tutorial;
 

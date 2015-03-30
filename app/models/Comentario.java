@@ -1,5 +1,6 @@
 package models;
 
+
 import play.data.validation.Constraints;
 import play.db.ebean.Model;
 
@@ -10,14 +11,13 @@ import javax.persistence.Id;
 import java.util.List;
 
 /**
- * Created by danilomendes on 11/5/14.
+ * Created by danilomendes on 3/29/15.
  */
 @Entity
-public class Game extends Model{
-
+public class Comentario {
     @Id
     Long id;
 
     @Constraints.Required
-    private String name;
+    private String title;
 }

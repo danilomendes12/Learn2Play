@@ -1,0 +1,44 @@
+OBRIGATÓRIOS
+
+1)Criar models no java e no banco de dados
+    a)User
+    b)Tutorial
+    c)Comentário
+    d)Jogo
+    e)Plataforma
+
+
+2)Pegar templates de páginas faltantes
+    a)Search tutorial page
+    b)Create tutorial page
+    c)Tutorial page
+
+3)Sistema de criação de tutoriais
+    a)Como inserir estilos e fotos?
+    b)Sistema de recomendação
+
+4)Sistema de comentários
+
+5)Sistema de busca e filtros
+
+6)Arrumar UI/layout das páginas
+    a)Landing
+    b)User index
+    c)User panel
+    d)Sign Up page
+    e)Login page
+    f)Search tutorial page
+    g)Create tutorial page
+    h)Tutorial
+
+7)Ultimos ajustes e testes
+
+8)Comprar domínio
+
+9)Subir na amazon/colocar em produção
+==============================
+OPCIONAIS
+
+
+================================
+FINALIZADOS

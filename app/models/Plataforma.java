@@ -1,4 +1,5 @@
 package models;
+import play.data.validation.Constraints;
 
 import play.data.validation.Constraints;
 import play.db.ebean.Model;
@@ -9,12 +10,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.List;
 
-/**
- * Created by danilomendes on 11/5/14.
- */
-@Entity
-public class Game extends Model{
 
+/**
+ * Created by danilomendes on 3/29/15.
+ */
+
+
+@Entity
+public class Plataforma {
     @Id
     Long id;
 

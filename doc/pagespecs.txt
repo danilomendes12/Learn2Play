@@ -1,0 +1,45 @@
+Requisitos de cada página
+
+1) Landing Page
+-Botão grande de sign up
+-Botão grande de procurar por tutorial
+-Imagens bãnitas explicando o que faz o site e chamando pra escrever/ler
+
+2) Sign Up Page
+-Informações requeridas
+ a)nickname
+ b)email
+ c)senha/confirmação
+-Mostar se algum input foi inválido
+
+3) Login Page
+-Email e senha pra login
+-Mostrar se algum input foi inválido
+
+4) User Landing Page
+-Procurar tutorial
+-Recomendar tutoriais
+-Botão grande de escrever tutorial
+
+5) User Panel Page
+-Add foto
+-Deletar conta
+-Mudar senha
+
+6) Search Tutorial Page
+-Lista de opções compatível com a categoria procurada
+-Busca por texto
+-Mostra aplicação de filtros
+    a)Nível de dificuldade
+    b)Plataforma
+    c)Estrelas
+
+7) Create Tutorial Page
+-Ferramenta de criacão de tutorial
+-Marcar tutorial por nível de dificuldade e plataforma
+
+8) Tutorial Page
+-Conteúdo do tutorial
+-Opção de denunciar, dar nota, recomendar
+-Espaço para comentários
+-Tutoriais relacionados
