@@ -17,6 +17,11 @@ public class Tutorial extends Model {
     @Constraints.Required
     private String text;
 
+    @Lob
+    public byte[] tutorialImage;
+
+    private int recomendationNumber;
+
     @ManyToOne
     User user;
 

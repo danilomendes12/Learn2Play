@@ -2,7 +2,7 @@ OBRIGATÓRIOS
 
 2)Pegar templates de páginas faltantes
     a)Search tutorial page
-    b)Create tutorial page
+        b)Create tutorial page
     c)Tutorial page
 
 3)Sistema de criação de tutoriais
@@ -11,12 +11,14 @@ OBRIGATÓRIOS
 
 4)Sistema de comentários
 
+4.1)Add DATAS
+
 5)Sistema de busca e filtros
 
 6)Arrumar UI/layout das páginas
     a)Landing
     b)User index
-    c)User pangil
+    c)User panel
     d)Sign Up page
     e)Login page
     f)Search tutorial page

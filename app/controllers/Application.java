@@ -65,4 +65,9 @@ public class Application extends Controller {
         }
     }
 
+    public static Result tutorialPage() {
+        String title = "Tutorial";
+        return ok(tutorial_page.render(title));
+    }
+
 }
